@@ -22,7 +22,8 @@
 
         .container {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
+            min-height: 100dvh;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             background-image: url('/img/bg.jpg');
             background-size: contain;
@@ -35,7 +36,7 @@
             align-items: center;
             padding-left: 8vw;
             padding-right: 8vw;
-            padding-bottom: 2vh;
+            padding-bottom: 5vh;
             padding-top: 8vh;
             position: relative;
         }
@@ -53,7 +54,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.03);
             z-index: 1;
         }
 
@@ -62,11 +63,11 @@
             color: white;
             z-index: 2;
             animation: fadeInDown 1.5s ease-out;
+            /* margin-top: 2vh; */
         }
 
         .mrs-mr {
             font-family: 'Cormorant Garamond', serif;
-            /* font-size: clamp(2rem, 8vw, 2rem); */
             font-size: 1.5em;
             font-weight: 300;
             letter-spacing: 0.3em;
@@ -113,12 +114,12 @@
             color: black;
             z-index: 2;
             animation: fadeInUp 1.5s ease-out;
+            /* margin-bottom: 1vh; */
         }
 
         .location {
             font-family: 'Montserrat', sans-serif;
             font-size: clamp(0.8em, 1vw, 1em);
-            /* font-size: 0.9em; */
             font-weight: 300;
             letter-spacing: 0.2em;
             text-transform: uppercase;
@@ -149,10 +150,29 @@
 
         @media (max-width: 768px) {
             .container {
-              padding-left: 8vw;
-              padding-right: 8vw;
-              padding-bottom: 2vw;
-              padding-top: 8vw;
+                padding-left: 8vw;
+                padding-right: 8vw;
+                padding-bottom: 6vh;
+                padding-top: 6vh;
+            }
+            
+            .bottom-content {
+                margin-bottom: 3vh;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .container {
+                padding-top: 4vh;
+                padding-bottom: 4vh;
+            }
+            
+            .top-content {
+                margin-top: 1vh;
+            }
+            
+            .bottom-content {
+                margin-bottom: 2vh;
             }
         }
     </style>
